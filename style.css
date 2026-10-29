@@ -1,0 +1,943 @@
+/* ==========================
+   GOOGLE FONT & COLOR PALETTE
+========================== */
+
+:root{
+    --bg-color:#F7F4D5;
+    --green:#839958;
+    --teal:#105666;
+    --dark-green:#0A3323;
+    --rose:#D3968C;
+
+    --text:#2f2f2f;
+    --white:#ffffff;
+
+    --shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+body.dark-mode{
+
+    --bg-color:#1D1D1D;
+    --green:#56663A;
+    --teal:#174754;
+    --dark-green:#071E15;
+    --rose:#8A5E58;
+
+    --text:#2f2f2f;
+    --white:#2B2B2B;
+
+}
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg-color);
+
+    color:var(--text);
+
+    font-family:"Nunito",sans-serif;
+
+    transition:.35s;
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+
+    position:sticky;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 70px;
+
+    background:var(--green);
+
+    box-shadow:var(--shadow);
+
+    z-index:999;
+
+}
+
+.nav-logo{
+
+    font-family:"Quicksand",sans-serif;
+    font-size:1.7rem;
+    font-weight:700;
+
+    color:white;
+
+}
+
+.nav-links{
+
+    display:flex;
+    gap:45px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.8;
+
+}
+
+/* ==========================
+   DARK MODE SWITCH
+========================== */
+
+.switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:70px;
+
+    height:36px;
+
+}
+
+.switch input{
+
+    display:none;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:var(--rose);
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.toggle-circle{
+
+    position:absolute;
+
+    left:4px;
+
+    top:4px;
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:white;
+
+    transition:.35s;
+
+}
+
+.sun{
+
+    position:absolute;
+
+    left:10px;
+
+    top:8px;
+
+    font-size:15px;
+
+}
+
+.moon{
+
+    position:absolute;
+
+    right:10px;
+
+    top:8px;
+
+    font-size:15px;
+
+}
+
+.switch input:checked + .slider{
+
+    background:var(--dark-green);
+
+}
+
+.switch input:checked + .slider .toggle-circle{
+
+    transform:translateX(34px);
+
+}
+
+/* ==========================
+   GREETING
+========================== */
+
+.greeting-section{
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+    padding:40px;
+
+    background:#F7F4D5;
+
+    border:3px solid var(--green);
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+#greeting{
+
+    font-family:"Quicksand",sans-serif;
+
+    font-size:2.2rem;
+
+    color:var(--dark-green);
+
+    margin-bottom:15px;
+
+}
+
+#currentDate,
+#currentTime{
+
+    color:var(--text);
+
+}
+
+
+#currentDate{
+
+    font-size:1.05rem;
+
+    margin-bottom:8px;
+
+}
+
+#currentTime{
+
+    font-size:1rem;
+
+    opacity:.8;
+
+}
+
+/* ==========================
+   BIO + PROFILE
+========================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:50px auto;
+
+    display:flex;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+    padding:0 25px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================
+   BIOGRAPHY
+========================== */
+
+.card{
+
+    flex:2;
+
+    min-width:650px;
+
+    background:#F7F4D5;
+
+    border:3px solid var(--green);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+#h1{
+
+    font-family:"Quicksand",sans-serif;
+
+    text-align:center;
+
+    color:var(--dark-green);
+
+    margin-bottom:30px;
+
+}
+
+.card h2{
+
+    margin-top:25px;
+
+    margin-bottom:10px;
+
+    color:var(--dark-green);
+
+}
+
+.card p{
+
+    line-height:1.8;
+
+    text-align:justify;
+
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:18px;
+
+}
+
+th{
+
+    background:var(--green);
+
+    color:white;
+
+    padding:14px;
+
+}
+
+td{
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+}
+
+tr:nth-child(even){
+
+    background:#f6f6f6;
+
+}
+
+/* ==========================
+   PROFILE CARD
+========================== */
+
+.profile-card{
+
+    width:320px;
+
+    background:var(--rose);
+
+    color:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+
+    top:110px;
+
+}
+
+.profile-card img{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid white;
+
+    margin-bottom:20px;
+
+}
+
+.profile-card h2{
+
+    font-family:"Quicksand",sans-serif;
+
+    margin-bottom:15px;
+
+}
+
+.profile-card p{
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.button-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.btn-link{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+#button1{
+
+    background:var(--green);
+
+}
+
+#button2{
+
+    background:var(--dark-green);
+
+}
+
+.btn-link:hover{
+
+    transform:translateY(-3px);
+
+    opacity:.9;
+
+}
+
+/* ==========================
+   MOOD TRACKER
+========================== */
+
+.mood-section{
+
+    max-width:1100px;
+
+    margin:70px auto;
+
+    background:var(--green);
+
+    color:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.mood-section h2{
+
+    font-family:"Quicksand",sans-serif;
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.mood-subtitle{
+
+    opacity:.9;
+
+    margin-bottom:35px;
+
+}
+
+.mood-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.mood-btn{
+
+    width:120px;
+
+    height:120px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.mood-btn:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.mood-btn.active{
+
+    background:var(--rose);
+
+    color:white;
+
+}
+
+.emoji{
+
+    font-size:2.5rem;
+
+    margin-bottom:10px;
+
+}
+
+.label{
+
+    font-weight:700;
+
+    font-size:1rem;
+
+}
+
+#moodResult{
+
+    margin-top:30px;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   TO DO LIST
+========================== */
+
+.todo-section{
+
+    max-width:1100px;
+
+    margin:70px auto;
+
+    background:var(--teal);
+
+    color:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.todo-section h2{
+
+    font-family:"Quicksand",sans-serif;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+#todoForm{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+#todoInput{
+
+    flex:1;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    outline:none;
+
+    font-size:1rem;
+
+}
+
+#todoForm button{
+
+    padding:16px 30px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:var(--rose);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+#todoForm button:hover{
+
+    transform:scale(1.05);
+
+}
+
+#todoList{
+
+    list-style:none;
+
+}
+
+.todo-item{
+
+    background:white;
+
+    color:#333;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    padding:15px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.todo-item span{
+
+    flex:1;
+
+}
+
+.completed{
+
+    text-decoration:line-through;
+
+    opacity:.6;
+
+}
+
+.delete-btn{
+
+    border:none;
+
+    background:#D9534F;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.empty-message{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    opacity:.8;
+
+}
+
+/* ==========================
+   QUOTE
+========================== */
+
+.quote-section{
+
+    max-width:1100px;
+
+    margin:70px auto;
+
+    background:var(--dark-green);
+
+    color:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.quote-section h2{
+
+    font-family:"Quicksand",sans-serif;
+
+    margin-bottom:25px;
+
+}
+
+#quoteBtn{
+
+    background:var(--rose);
+
+    color:white;
+
+    border:none;
+
+    padding:15px 28px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+#quoteBtn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#quoteText{
+
+    margin-top:30px;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    font-style:italic;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    margin-top:80px;
+
+    background:var(--dark-green);
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* ==========================
+   VIRTUAL CAT
+========================== */
+
+.cat-container{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:20px;
+
+    z-index:999;
+
+}
+
+#cat{
+
+    width:120px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#cat:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:18px;
+
+        padding:20px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .card{
+
+        min-width:100%;
+
+    }
+
+    .profile-card{
+
+        width:100%;
+
+        position:static;
+
+    }
+
+    #todoForm{
+
+        flex-direction:column;
+
+    }
+
+    .mood-btn{
+
+        width:95px;
+
+        height:95px;
+
+    }
+
+    #cat{
+
+        width:90px;
+
+    }
+
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakiyyah SPA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NavBar -->
+  <nav class="navbar">
+    <span class="nav-logo">Zakiyyah.dev</span>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#mood">Mood</a>
+      <a href="#todo">To-Do</a>
+      <a href="#quote">Quote</a>
+    </div>
+
+    <label class="switch">
+    <input type="checkbox" id="themeToggle">
+
+    <span class="slider">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+
+        <span class="toggle-circle"></span>
+    </span>
+</label>
+  </nav>
+
+  <!-- Dynamic Greeting  -->
+  <header id="home" class="greeting-section">
+    <h2 id="greeting">Loading greeting...</h2>
+    <p id="currentDate"></p>
+    <p id="currentTime"></p>
+  </header>
+
+  <!-- Biografi + Pofile Card -->
+  <div class="container">
+    <div class="card">
+
+        <h1 id="h1">Let's Get to Know Me, First!</h1>
+
+        <h2>Zakiyyah Bintang Nur Fadhilah</h2>
+
+        <p>
+           Incoming Undergraduate Student in Internet Engineering Technology at Universitas Gadjah Mada. Strong interest in technology development and innovation. Possesses skills in problem-solving, graphic design, and financial management. Achieved recognition in design competitions and participated in computer olympiads during high school.
+        </p>
+
+        <h2>Education</h2>
+
+        <p>1. UGM, Internet Engineering Technology (2026 - Present)</p>
+        <p>2. SMAN 1 Wonogiri (2023 - 2026)</p>
+
+        <h2>Organization Experience</h2>
+
+        <p>1. Science Club (KIR), Treasurer</p>
+        <p>2. Scout, Mentor</p>
+
+        <h2 id="h4">Achievements</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>No</th>
+                    <th>Position</th>
+                    <th>Competition</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1</td>
+                    <td>Finalist</td>
+                    <td>Top 5 of the School Selection OSN in Informatics 2025</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>2nd Place</td>
+                    <td>National Digital Poster Competition of Umla 2024</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <h2>Projects</h2>
+
+        <p>1. Mathematics Statistics Application, Python & JavaScript</p>
+        <p>2. MIT App Inventor Projects</p>
+        <p>3. LED Cube Project</p>
+        <p>4. Graphic Design Projects</p>
+
+    </div>
+
+
+
+         <div class="profile-card">
+
+        <img src="fotoo.jpeg" alt="Profile Picture">
+
+        <h2>Profile Card</h2>
+
+        <p>Hi! I'm someone who absolutely loves black cats. My friends often say that if I were an animal, I'd definitely be a black cat and honestly, I couldn't agree more! Feel free to connect with me through the links below if you'd like to know me better.</p>
+        
+        <div class="button-container">
+    <a id="button1" class="btn-link"
+       href="https://www.instagram.com/bintangzakiyahnur?igsh=a3psZnhqNTd3ZWdo"
+       target="_blank">
+       My Instagram
+    </a>
+
+    <a id="button2" class="btn-link"
+       href="https://www.linkedin.com/in/zakiyyah-bintang-nur-fadhilah-a84205416?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+       target="_blank">
+       My LinkedIn
+    </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mood Tracker -->
+  <section id="mood" class="mood-section">
+  <h2>🐈‍⬛ How are you feeling today?</h2>
+  <p class="mood-subtitle">
+    Choose the mood that best describes your day!
+  </p>
+
+  <div class="mood-container">
+
+    <button class="mood-btn" data-mood="happy">
+      <span class="emoji">😊</span>
+      <span class="label">Happy</span>
+    </button>
+
+    <button class="mood-btn" data-mood="excited">
+      <span class="emoji">🤩</span>
+      <span class="label">Excited</span>
+    </button>
+
+    <button class="mood-btn" data-mood="neutral">
+      <span class="emoji">😐</span>
+      <span class="label">Neutral</span>
+    </button>
+
+    <button class="mood-btn" data-mood="sleepy">
+      <span class="emoji">😴</span>
+      <span class="label">Sleepy</span>
+    </button>
+
+    <button class="mood-btn" data-mood="stressed">
+      <span class="emoji">😭</span>
+      <span class="label">Stressed</span>
+    </button>
+
+    <button class="mood-btn" data-mood="angry">
+      <span class="emoji">😡</span>
+      <span class="label">Angry</span>
+    </button>
+
+  </div>
+
+  <p id="moodResult">
+    You haven't selected your mood yet.
+  </p>
+</section>
+
+  <!-- To Do List -->
+  <section id="todo" class="todo-section">
+    <h2>📝 My To-Do List</h2>
+    <form id="todoForm">
+      <input type="text" id="todoInput" placeholder="Add a New Task..." required>
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="todoList"></ul>
+    <p id="todoEmpty" class="empty-message">No tasks yet. Add one to get started!</p>
+  </section>
+
+  <!-- QUOTE GENERATOR -->
+  <section id="quote" class="quote-section">
+    <h2>💬 Inspirational Quotes</h2>
+    <button id="quoteBtn">Get a Quote</button>
+    <p id="quoteText">Click the button above to discover an inspiring quote!</p>
+  </section>
+
+
+  <footer class="footer">
+    <p>&copy; 2026 Zakiyyah. Made with love, HTML, CSS, & JavaScript.</p>
+  </footer>
+
+  <!-- Virtual Cat -->
+<div class="cat-container">
+  <img id="cat" src="cat-awake.png" alt="Cute virtual cat">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
